@@ -18,7 +18,6 @@ M2 <- read.csv("MOOC2.csv",header = TRUE)
 
 ## Decision Tree
 ```{r}
-View(M2)
 c.tree1 <- rpart(certified ~ forum.posts + grade + assignment, method = "class", data = M1, control = rpart.control(minsplit = 1,minbucket = 1,cp=0.001))
 
 # look at the error of this tree
